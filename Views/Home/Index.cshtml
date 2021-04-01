@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<h3>Policy Form</h3>
+    <div class="container">
+        <form asp-action="DatabaseOperations">
+            <label for="fname">Policy Number</label>
+            <input type="text" id="pnumber" name="policynumber" placeholder="Your policy number..">
+
+            <label for="lname">Product</label>
+            <input type="text" id="pcode" name="productcode" placeholder="Your product code..">
+
+            <label for="country">PolicyStatus</label>
+            <select id="country" name="country">
+                <option value="Not_Begun">NotBegun</option>
+                <option value="On_Risk">OnRisk</option>
+                <option value="Expired">Expired</option>
+                <option value="Cancelled">Cancelled</option>
+            </select>
+            <label for="country">Database Operation</label>
+            <select id="dpOperation" name="Select DB Operation">
+                <option value="1">Insert</option>
+                <option value="2">Update</option>
+                <option value="3">Delete</option>
+            </select>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
